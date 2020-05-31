@@ -20,18 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="initiating TPH">
-      <change afterPath="$PROJECT_DIR$/home/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0002_auto_20200522_0249.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0003_auto_20200522_0251.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0004_auto_20200522_0252.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TPH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TPH.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TPH/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TPH/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/blogHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blogHome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/blogPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blogPost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +117,11 @@
       <workItem from="1589289819161" duration="51000" />
       <workItem from="1590090757141" duration="5544000" />
       <workItem from="1590160742023" duration="1421000" />
+      <workItem from="1590219009020" duration="682000" />
+      <workItem from="1590259304893" duration="81000" />
+      <workItem from="1590343193607" duration="667000" />
+      <workItem from="1590351171752" duration="2993000" />
+      <workItem from="1590551200359" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="initiating TPH">
       <created>1590091676841</created>
@@ -132,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590091694443</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initiating TPH">
+      <created>1590219062323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590219062323</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,30 +180,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="422" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590161829198" />
-    <state width="1238" height="163" key="GridCell.Tab.0.bottom" timestamp="1590096510789">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom" timestamp="1590354170067">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590096510789" />
-    <state width="1238" height="163" key="GridCell.Tab.0.center" timestamp="1590096510789">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
+    <state width="1238" height="163" key="GridCell.Tab.0.center" timestamp="1590354170067">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590096510789" />
-    <state width="1238" height="163" key="GridCell.Tab.0.left" timestamp="1590096510789">
+    <state width="1238" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
+    <state width="1238" height="163" key="GridCell.Tab.0.left" timestamp="1590354170067">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590096510789" />
-    <state width="1238" height="163" key="GridCell.Tab.0.right" timestamp="1590096510789">
+    <state width="1238" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right" timestamp="1590354170067">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590096510789" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1590161834635">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590161834635" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1590091911683">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1590219071511">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590091911683" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590219071511" />
     <state x="415" y="215" width="609" height="280" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1590161831463">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
