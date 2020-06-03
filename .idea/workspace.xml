@@ -19,18 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="initiating TPH">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TPH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TPH.iml" afterDir="false" />
+    <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="saving some progress somewhat">
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0002_auto_20200602_0239.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPH/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TPH/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog/blogHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blogHome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog/blogPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blogPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +123,13 @@
       <workItem from="1590343193607" duration="667000" />
       <workItem from="1590351171752" duration="2993000" />
       <workItem from="1590551200359" duration="16000" />
+      <workItem from="1590961116270" duration="929000" />
+      <workItem from="1590962080805" duration="1361000" />
+      <workItem from="1591041075119" duration="11436000" />
+      <workItem from="1591093603651" duration="1208000" />
+      <workItem from="1591125003324" duration="7459000" />
+      <workItem from="1591197022646" duration="290000" />
+      <workItem from="1591211305189" duration="4609000" />
     </task>
     <task id="LOCAL-00001" summary="initiating TPH">
       <created>1590091676841</created>
@@ -144,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590219062323</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="saving some progress somewhat">
+      <created>1590961141156</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590961141156</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,9 +180,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initiating TPH" />
-    <option name="LAST_COMMIT_MESSAGE" value="initiating TPH" />
+    <MESSAGE value="saving some progress somewhat" />
+    <option name="LAST_COMMIT_MESSAGE" value="saving some progress somewhat" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#Intentions" timestamp="1591214205928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#Intentions/0.0.1280.680@0.0.1280.680" timestamp="1591214205928" />
     <state x="510" y="203" key="#Notifications" timestamp="1590091776244">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -180,30 +200,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="422" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590161829198" />
-    <state width="1238" height="163" key="GridCell.Tab.0.bottom" timestamp="1590354170067">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom" timestamp="1591213793633">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
-    <state width="1238" height="163" key="GridCell.Tab.0.center" timestamp="1590354170067">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591213793633" />
+    <state width="1238" height="163" key="GridCell.Tab.0.center" timestamp="1591213793633">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
-    <state width="1238" height="163" key="GridCell.Tab.0.left" timestamp="1590354170067">
+    <state width="1238" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591213793633" />
+    <state width="1238" height="163" key="GridCell.Tab.0.left" timestamp="1591213793632">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
-    <state width="1238" height="163" key="GridCell.Tab.0.right" timestamp="1590354170067">
+    <state width="1238" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591213793632" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right" timestamp="1591213793633">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590354170067" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591213793633" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1590161834635">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590161834635" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1590219071511">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1590961156852">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590219071511" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590961156852" />
     <state x="415" y="215" width="609" height="280" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1590161831463">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
