@@ -1,6 +1,7 @@
-from django.shortcuts import render, HttpResponse
-from blog.models import Blogpost
+from django.shortcuts import render, HttpResponse, redirect
+from blog.models import Blogpost, Blogcomment
 from django.contrib import messages
+from blog.templatetags import extras
 
 
 # Create your views here.
@@ -10,8 +11,7 @@ def search(query):
     returned = []
     for post in allpost:
         if post.Content.lower().__contains__(query) or post.title.lower().__contains__(
-                query) or post.author.lower().__contains__(
-            query) or post.slug.lower().__contains__(query):
+                query) or post.author.lower().__contains__(query) or post.slug.lower().__contains__(query):
             returned.append(post)
     return returned
 
@@ -36,11 +36,41 @@ def BlogHome(request):
 
 
 def BlogPost(request, slug):
+    replydict = {}
     allposts = Blogpost.objects.all()
     mypost = ""
+    comment = ""
     exist = False
     if Blogpost.objects.filter(slug=slug).exists():
         mypost = Blogpost.objects.filter(slug=slug).first()
-        exist = True
         print(mypost)
-    return render(request, 'blog/blogPost.html', {'post': mypost, 'exist': exist})
+        comment = Blogcomment.objects.filter(post=mypost, parent=None)
+        replies = Blogcomment.objects.filter(post=mypost).exclude(parent=None)
+        for reply in replies:
+            if reply.parent.sno not in replydict.keys():
+                replydict[reply.parent.sno] = [reply]
+            else:
+                replydict[reply.parent.sno].append(reply)
+    return render(request, 'blog/blogPost.html', {'post': mypost, 'comments': comment, 'replydict': replydict})
+
+
+def postcomment(request):
+    if request.method == "POST":
+        text = request.POST.get('comment')
+        user = request.user
+        postno = request.POST.get('sno')
+        post = Blogpost.objects.filter(sno=postno).first()
+        parent = request.POST.get('parent')
+        if parent == '':
+            comment = Blogcomment(text=text, user=user, post=post)
+            messages.success(request,
+                             "Your valuable thoughts are saved in our data servers and are visible for others!")
+        else:
+            parent = Blogcomment.objects.filter(sno=parent)[0]
+            comment = Blogcomment(text=text, user=user, post=post, parent=parent)
+            messages.success(request,
+                             "Your valuable thoughts on someone else's thought are saved in our data servers and are "
+                             "visible for others!")
+        comment.save()
+
+    return redirect(f"/blog/{post.slug}")

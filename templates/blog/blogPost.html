@@ -6,14 +6,99 @@
     active
 {% endblock %}
 {% block body %}
+    {% load static %}
+    {% load humanize %}
+    {% load extras %}
     <div class="container" align="center">
-        {% if exist %}
+        {% if not post == "" %}
             <div class="col-8">
                 <p align="left">{{ post.Timestamp }}</p>
                 <h1 style="text-align: center;">{{ post.title }}</h1>
                 <h6 style="text-align: center;">- By {{ post.author }}</h6>
                 <hr>
-                <p>{{ post.Content }}</p>
+                <p>{{ post.Content|safe }}</p>
+            </div>
+            <div class="container" align="left">
+                <h4>Comments ({{ comments.count }})</h4>
+                <div class="my-2">
+                    {% if user.is_authenticated %}
+                        <form action="/blog/postcomment" method="post">{% csrf_token %}
+                            <div class="form-group">
+                        <textarea class="form-control" placeholder="Tell others your valuable thoughts on this post"
+                                  name="comment"></textarea>
+                                <input type="hidden" name="sno" value="{{ post.sno }}">
+                                <input type="hidden" name="parent" value="">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    {% else %}
+                        <p class=" mx-2 p-5">Log in to post a comment!</p>
+                    {% endif %}
+                </div>
+                {% for comment in comments %}
+                    <div class="card card-body my-3 p-3 rounded">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="{% static 'img/default-user-icon.jpg' %}"
+                                     class="w-100 rounded-circle border border-dark">
+                            </div>
+                            <div class="col-md-11">
+                                <b>{{ comment.user }}</b> <span
+                                    class="badge badge-secondary">{{ comment.timestamp|naturaltime }}</span>
+                                <div class="my-3">{{ comment.text }}</div>
+
+
+                                <div class="replies my-2">
+                                    {% for reply in replydict|get_val:comment.sno %}
+
+                                        <!--reply starts-->
+                                        <div class="row my-3">
+                                            <div class="col-md-1">
+                                                <img src="{% static 'img/default-user-icon.jpg' %}"
+                                                     class="w-100 rounded-circle border border-dark">
+                                            </div>
+                                            <div class="col-md-11">
+                                                <b>{{ reply.user }}</b> <span
+                                                    class="badge badge-secondary">{{ reply.timestamp|naturaltime }}</span>
+                                                <div class="my-1">{{ reply.text }}</div>
+                                            </div>
+                                        </div>
+                                        <!--reply ends-->
+                                    {% endfor %}
+
+                                </div>
+                                <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                        data-target="#collapse{{ comment.sno }}" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                    Reply
+                                </button>
+
+                                <div class="collapse" id="collapse{{ comment.sno }}">
+                                    <div class="card card-body mt-3 border-0">
+
+                                        {% if user.is_authenticated %}
+                                            <form action="/blog/postcomment" method="post">{% csrf_token %}
+                                                <div class="form-group">
+                                                    <textarea class="form-control"
+                                                              placeholder="Tell others your valuable thoughts on this post"
+                                                              name="comment" id="comment"></textarea>
+                                                    <input type="hidden" name="sno" value="{{ post.sno }}">
+                                                    <input type="hidden" name="parent" value="{{ comment.sno }}">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Send</button>
+                                            </form>
+
+                                        {% else %}
+                                            <p class=" mx-2 p-5">Log in to post a reply!</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         {% else %}
             <div class="d-flex align-items-center justify-content-center w-100" style="height: 100%;">
