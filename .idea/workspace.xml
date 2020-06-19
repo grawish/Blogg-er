@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="Major changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPH/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TPH/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="Heroku Integration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +126,7 @@
       <workItem from="1591640756213" duration="3099000" />
       <workItem from="1591718362980" duration="422000" />
       <workItem from="1592507577765" duration="657000" />
-      <workItem from="1592590584533" duration="10578000" />
+      <workItem from="1592590584533" duration="10884000" />
     </task>
     <task id="LOCAL-00001" summary="initiating TPH">
       <created>1590091676841</created>
@@ -180,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592602487095</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Heroku Integration">
+      <created>1592602870925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592602870925</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +207,8 @@
     <MESSAGE value="initiating TPH" />
     <MESSAGE value="saving some progress somewhat" />
     <MESSAGE value="Major changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Major changes" />
+    <MESSAGE value="Heroku Integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Heroku Integration" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Intentions" timestamp="1591214205928">
@@ -246,10 +251,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590161834635" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1592602501541">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1592602881760">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1592602501541" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1592602881760" />
     <state x="415" y="215" width="609" height="280" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1590161831463">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
