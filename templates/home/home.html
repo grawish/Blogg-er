@@ -27,7 +27,7 @@
                             <h3 class="mb-0">{{ post.title }}</h3>
                             <div class="mb-1 text-muted">{{ post.Timestamp }}</div>
                             <div class="preview">
-                                <p class="card-text mb-auto">{{ post.Content|safe|truncatechars:100 }}</p>
+                                <p class="card-text mb-auto"><div class="preview">{{ post.Content|safe|truncatechars:100 }}</div></p>
                             </div>
                             <a href="/blog/{{ post.slug }}" class="stretched-link">Continue reading</a>
                         </div>
@@ -54,8 +54,8 @@
 {% block js %}
 <script>
 
-    for (let i = 0; i < document.getElementsByClassName('preview').length-1; i++) {
-        document.getElementsByClassName('preview')[i].innerHTML = document.getElementsByClassName('preview')[i].innerText
-    }
+    Array.from(document.getElementsByClassName('preview')).forEach((element)=>{
+    element.innerHTML = element.innerText;
+})
 </script>
 {% endblock %}
