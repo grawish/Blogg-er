@@ -74,3 +74,28 @@ def postcomment(request):
         comment.save()
 
     return redirect(f"/blog/{post.slug}")
+
+
+def postblog(request):
+    if request.method == "POST":
+        title = request.POST.get('title')
+        post = request.POST.get('posthtml')
+        user = request.POST.get('user')
+        alpost = Blogpost.objects.all();
+        slug = title.replace(' ', '-')
+        count = 1
+        everexisted = False
+        for onepost in alpost:
+            if not everexisted:
+                if onepost.slug == slug:
+                    everexisted = True
+            else:
+                if onepost.slug == slug + str(count):
+                    count += 1
+        if everexisted:
+            slug += str(count)
+        print(post)
+        bpost = Blogpost(title=title, Content=post, author=user, slug=slug)
+        bpost.save()
+        return redirect('home')
+    return render(request, 'blog/postblog.html')

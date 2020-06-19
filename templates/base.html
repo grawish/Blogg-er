@@ -4,8 +4,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    {% block head %}
 
+    {% endblock %}
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -63,14 +67,15 @@
         {% else %}
             <ul class="navbar-nav">
                 <li class="nav-item dropdown mx-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Welcome Mr. {{ request.user.last_name|capfirst }}
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Welcome Mr. {{ request.user.last_name|capfirst }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a href="/logout/" class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/logout/" class="dropdown-item" href="#">Logout</a>
                     </div>
                 </li>
             </ul>
@@ -173,7 +178,11 @@
 
 {% endblock %}
 
-
+{% if user.is_authenticated %}
+    <button onclick="window.location.href='/blog/create-new-post/'" class="btn btn-primary"
+            style="z-index: 10; width: 70px; height: 70px; position: fixed; bottom: 5%; right: 4%; border-radius: 50%; padding: 0px;">
+        <i style="font-size: 30px;" class="fa fa-plus"></i></button>
+{% endif %}
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -20,20 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="Major changes">
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0003_blogcomment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templatetags/extras.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/default-user-icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/postblog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TPH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TPH.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPH/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TPH/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/blogPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blogPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -140,6 +135,8 @@
       <workItem from="1591543909271" duration="1944000" />
       <workItem from="1591640756213" duration="3099000" />
       <workItem from="1591718362980" duration="422000" />
+      <workItem from="1592507577765" duration="657000" />
+      <workItem from="1592590584533" duration="8804000" />
     </task>
     <task id="LOCAL-00001" summary="initiating TPH">
       <created>1590091676841</created>
@@ -218,22 +215,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="422" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590161829198" />
-    <state width="1238" height="109" key="GridCell.Tab.0.bottom" timestamp="1591718792309">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom" timestamp="1592600294904">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="109" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591718792309" />
-    <state width="1238" height="109" key="GridCell.Tab.0.center" timestamp="1591718792309">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592600294904" />
+    <state width="1238" height="163" key="GridCell.Tab.0.center" timestamp="1592600294904">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="109" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591718792309" />
-    <state width="1238" height="109" key="GridCell.Tab.0.left" timestamp="1591718792309">
+    <state width="1238" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592600294904" />
+    <state width="1238" height="163" key="GridCell.Tab.0.left" timestamp="1592600294904">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="109" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591718792309" />
-    <state width="1238" height="109" key="GridCell.Tab.0.right" timestamp="1591718792309">
+    <state width="1238" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592600294904" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right" timestamp="1592600294904">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="109" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591718792309" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592600294904" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1590161834635">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
