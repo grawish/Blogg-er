@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="Heroku Integration">
+    <list default="true" id="b3021d8a-df8b-4f19-b474-84c245098b2d" name="Default Changelist" comment="correcting HTML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TPH/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TPH/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/blogHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blogHome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,8 @@
       <workItem from="1591640756213" duration="3099000" />
       <workItem from="1591718362980" duration="422000" />
       <workItem from="1592507577765" duration="657000" />
-      <workItem from="1592590584533" duration="13583000" />
+      <workItem from="1592590584533" duration="14852000" />
+      <workItem from="1592682033625" duration="1959000" />
     </task>
     <task id="LOCAL-00001" summary="initiating TPH">
       <created>1590091676841</created>
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592603651122</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="correcting HTML">
+      <created>1592605935714</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1592605935714</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +242,8 @@
     <MESSAGE value="saving some progress somewhat" />
     <MESSAGE value="Major changes" />
     <MESSAGE value="Heroku Integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Heroku Integration" />
+    <MESSAGE value="correcting HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="correcting HTML" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Intentions" timestamp="1591214205928">
@@ -259,30 +266,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="422" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590161829198" />
-    <state width="1238" height="163" key="GridCell.Tab.0.bottom" timestamp="1592605813816">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom" timestamp="1592607741214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592605813816" />
-    <state width="1238" height="163" key="GridCell.Tab.0.center" timestamp="1592605813816">
+    <state width="1238" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592607741214" />
+    <state width="1238" height="163" key="GridCell.Tab.0.center" timestamp="1592607741214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592605813816" />
-    <state width="1238" height="163" key="GridCell.Tab.0.left" timestamp="1592605813816">
+    <state width="1238" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592607741214" />
+    <state width="1238" height="163" key="GridCell.Tab.0.left" timestamp="1592607741198">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592605813816" />
-    <state width="1238" height="163" key="GridCell.Tab.0.right" timestamp="1592605813816">
+    <state width="1238" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592607741198" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right" timestamp="1592607741214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592605813816" />
+    <state width="1238" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592607741214" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1592605611908">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1592605611908" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1592603656543">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1592605941653">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1592603656543" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1592605941653" />
     <state x="415" y="215" width="609" height="280" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1590161831463">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

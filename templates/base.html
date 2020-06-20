@@ -4,7 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    {% if not user.is_authenticated %}
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("signupform").submit();
+            }
+        </script>
+    {% endif %}
     {% block head %}
 
     {% endblock %}
@@ -90,89 +97,95 @@
         </button>
     </div>
 {% endfor %}
-<!--signup modal-->
-<div class="modal fade" id="signupmodal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Sign Up</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span style="color: red;" aria-hidden="true">&times;</span>
-                </button>
+{% if not user.is_authenticated %}
+
+
+    <!--signup modal-->
+    <div class="modal fade" id="signupmodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span style="color: red;" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/signup/" id="signupform" method="post">{% csrf_token %}
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="username" class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="uname"
+                                   placeholder="Choose a unique username" autocomplete="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fname" class="col-form-label">First Name</label>
+                            <input type="text" class="form-control" id="fname" name="fname"
+                                   placeholder="Tell us Your First name!" autocomplete="firstname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" class="col-form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lname"
+                                   placeholder="Tell us your Lastname!" autocomplete="lastname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                   placeholder="Make us Contact you!" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pas" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="pas" name="pas"
+                                   placeholder="Security is must! - (A-Z, a-z, 0-9, uniques)"
+                                   autocomplete="new-password"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pasc" class="col-form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="pasc" name="pasc"
+                                   placeholder="So that you cannot be wrong!" autocomplete="new-password" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="g-recaptcha btn btn-primary"
+                                data-sitekey="6LeA7aYZAAAAAGM9cop1J_Ilb_bmcHEIMHe7fTe8"
+                                data-callback='onSubmit'>Save changes</button>
+                    </div>
+                </form>
             </div>
-            <form action="/signup/" method="post">{% csrf_token %}
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="username" class="col-form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="uname"
-                               placeholder="Choose a unique username" autocomplete="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fname" class="col-form-label">First Name</label>
-                        <input type="text" class="form-control" id="fname" name="fname"
-                               placeholder="Tell us Your First name!" autocomplete="firstname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lname" class="col-form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lname" name="lname"
-                               placeholder="Tell us your Lastname!" autocomplete="lastname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email"
-                               placeholder="Make us Contact you!" autocomplete="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pas" class="col-form-label">Password</label>
-                        <input type="password" class="form-control" id="pas" name="pas"
-                               placeholder="Security is must! - (A-Z, a-z, 0-9, uniques)" autocomplete="new-password"
-                               required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pasc" class="col-form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="pasc" name="pasc"
-                               placeholder="So that you cannot be wrong!" autocomplete="new-password" required>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                </div>
-            </form>
         </div>
     </div>
-</div>
 
-<!--Login modal-->
-<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Login Here</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span style="color: red;" aria-hidden="true">&times;</span>
-                </button>
+    <!--Login modal-->
+    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login Here</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span style="color: red;" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/login/" method="post">{% csrf_token %}
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="uname" class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="uname" name="uname"
+                                   placeholder="Enter your unique username" autocomplete="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="lpas" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="lpas" name="lpas" placeholder="Password!"
+                                   autocomplete="current-password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </div>
+                </form>
             </div>
-            <form action="/login/" method="post">{% csrf_token %}
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="uname" class="col-form-label">Username</label>
-                        <input type="text" class="form-control" id="uname" name="uname"
-                               placeholder="Enter your unique username" autocomplete="username">
-                    </div>
-                    <div class="form-group">
-                        <label for="lpas" class="col-form-label">Password</label>
-                        <input type="password" class="form-control" id="lpas" name="lpas" placeholder="Password!"
-                               autocomplete="current-password">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Login</button>
-                </div>
-            </form>
         </div>
     </div>
-</div>
-
+{% endif %}
 
 {% block body %}
 
